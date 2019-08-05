@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://imranpollob.netlify.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: 'Blog by Imran Pollob',
+  subtitle: 'Fullstack Developer with 3+ years of experience. Love to code and explore new things. Let\'s build something cool together.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -25,16 +25,14 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Imran Pollob',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Fullstack Developer with 3+ years of experience. Love to code and explore new things. Let\'s build something cool together.',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      email: 'polboy777@gmail.com',
+      github: 'https://github.com/pollmix',
+      twitter: 'https://twitter.com/ImranPollob',
+      linkedin: 'https://www.linkedin.com/in/pollmix/'
     }
   }
 };
