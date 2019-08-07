@@ -3,7 +3,7 @@ template: post
 title: What is React?
 slug: what-is-react
 draft: false
-date: 2019-08-07T17:13:02.630Z
+date: 2019-08-06T17:13:02.630Z
 description: React history and main focus.
 category: React
 tags:
