@@ -2,7 +2,7 @@
 template: post
 title: Why React is so popular?
 slug: why-react-is-so-popular
-draft: true
+draft: false
 date: 2019-08-07T02:30:00.000Z
 description: The reason of Reacts popularity.
 category: React
