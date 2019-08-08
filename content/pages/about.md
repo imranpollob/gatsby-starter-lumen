@@ -1,8 +1,6 @@
 ---
-template: page
-title: About me
-slug: about
-draft: true
+title: "About me"
+template: "page"
 ---
 ### Hi 👋, its **Imran**. I am fascinated to have you here.
 
