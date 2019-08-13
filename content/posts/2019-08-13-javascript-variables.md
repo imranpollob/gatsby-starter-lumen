@@ -13,7 +13,7 @@ tags:
 * Variables in JavaScript do not have any type attached. Once you assign a specific literal type to a variable, you can later reassign the variable to any other type, without type errors or any issue.
 * A variable must be declared before you can use it. There are 3 ways to do this, using var, let or const, and their purpose are different from each other.
 
-#### var
+### var
 
 * Until ES2015, var was the only construct available for defining variables.
 
@@ -52,14 +52,14 @@ var a = 1, b = 2
 * **A block (identified by a pair of curly braces) does not define a new scope. A new scope is only created when a function is created, because var does not have block scope, but function scope.**
 * Inside a function, any variable defined in it is visible throughout all the function code, **even if the variable is declared at the end of the function** it can still be referenced in the beginning, because JavaScript before executing the code actually moves all variables on top (something that is called **hoisting**). To avoid confusion, always declare variables at the beginning of a function.
 
-let
+### let
 
 * let is a new feature introduced in ES2015 and it's essentially a **block scoped version of var**. Its scope is limited to the block, statement or expression where it's defined, and all the contained inner blocks.
 * **Defining let outside of any function - contrary to var - does not create a global variable.**
 
 Modern JavaScript developers might choose to only use let and completely discard the use of var.
 
-const
+### const
 
 * Variables declared with var or let can be changed later on in the program, and reassigned. Once a const is initialized, it's value can never be changed again, and it **can't be reassigned to a different value**.
 
@@ -68,18 +68,31 @@ const
 const a = 'Imran Pollob'
 ```
 
-* We can't assign a different literal to the a const. We can however mutate a if it's an object
+* const has **block scope**, same as let
+* We can't assign a different literal to the a const however, **can mutate it**, if it's an object that provides methods that mutate its contents. const does not provide immutability, just makes sure that the reference can't be changed.
 
-that provides methods that mutate its contents.
+```
+// We can create a const object:
+const car = {type:"Fiat", model:"500", color:"white"};
 
-const does not provide immutability, just makes sure that the reference can't be changed.
+// We can change a property:
+car.color = "red";
 
-const has block scope, same as let .
+// We can add a property:
+car.owner = "Johnson";
 
-Modern JavaScript developers might choose to always use const for variables that don't
+car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
 
-need to be reassigned later in the program.
+// We can create a constant array:
+const cars = ["Saab", "Volvo", "BMW"];
 
-Why? Because we should always use the simplest construct available to avoid making
+// We can change an element:
+cars[0] = "Toyota";
 
-errors down the road.
+// We can add an element:
+cars.push("Audi");
+
+cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+```
+
+Modern JavaScript developers might choose to always use const for variables that don't need to be reassigned later in the program.
