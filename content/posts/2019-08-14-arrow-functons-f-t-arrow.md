@@ -9,10 +9,7 @@ category: JavaScript
 tags:
   - javascript
 ---
-Arrow functions
-
-* It is the most significant change in ES6/ES2015 and since its introduction changed how JavaScript code looks (and works).
-
+Arrow function is the most significant change in ES6/ES2015 and since its introduction changed how JavaScript code looks (and works).
 
 ```
 const myFunction = function() {   //...
@@ -106,8 +103,7 @@ group.showList();
 */
 ```
 
-The error occurs because `forEach` runs functions with `this=undefined` by default, so the attempt to access undefined.title is made.
- That doesn’t affect arrow functions, because they just don’t have this.
+The error occurs because `forEach` runs functions with `this=undefined` by default, so the attempt to access undefined.title is made. That doesn’t affect arrow functions, because they just don’t have this.
 
 * When defined as a method of an object, in a regular function `this` refers to the object, so you can do:
 
@@ -124,7 +120,7 @@ const car = {
 car.fullName() // "Ford Fiesta"
 ```
 
-* The this scope with arrow functions is inherited from the execution context. An arrow function does not bind this at all, so its value will be looked up in the call stack, so in this code car.fullName() will not work, and will return the string "undefined undefined"
+* The `this` scope with arrow functions is inherited from the execution context. An arrow function does not bind this at all, so its value will be looked up in the call stack, so in this code `car.fullName()` will not work, and will return the string "undefined undefined"
 
 
 ```
