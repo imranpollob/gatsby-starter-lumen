@@ -1,10 +1,10 @@
 ---
 template: post
-title: 'JavaScript Arrow Functions or Fat Arrow, use cases'
-slug: javascript-array-functions-or-
-draft: true
+title: JavaScript Arrow Function (Fat Arrow) and its use cases
+slug: javascript-array-function-fat-arrow-and-its-use-cases
+draft: false
 date: 2019-08-13T20:57:54.046Z
-description: Learn about the most welcoming JavaScript
+description: Learn about the most welcoming ES6 feature and when to use and not use it.
 category: JavaScript
 tags:
   - javascript
