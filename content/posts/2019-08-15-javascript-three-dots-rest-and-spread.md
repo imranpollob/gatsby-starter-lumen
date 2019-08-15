@@ -45,19 +45,19 @@ const hey = 'hey'
 const hiArray = [...hey] // ['h', 'e', 'y']
 ```
 
-* This operator has some pretty useful applications. The most important one is the ability to use an array as function argument in a very simple way:
+* This operator has some pretty useful applications. The most important one is the ability to use an array as function argument (**spread element**) in a very simple way.
 
 
 ```
-const f = (foo, bar) => {}
-const a = \[1, 2]
-f(...a)
+const fun = (foo, bar) => {}
+const a = [1, 2]
+fun(...a)
 Math.max(...a) // 3
 ```
 
 (in the past you could do this using f.apply(null, a) but that's not as nice and readable)
 
-* Array Destructuring:
+* The **rest element** is useful when working with **array destructuring**.
 
 
 ```
@@ -65,35 +65,24 @@ const numbers = [1, 2, 3, 4, 5]
 [first, second, ...others] = numbers
 ```
 
-* Spread Elements:
-
-
-```
-const numbers = \[1, 2, 3, 4, 5]
-const sum = (a, b, c, d, e) => a + b + c + d + e
-const sum = sum(...numbers)
-```
-
-ES2018 introduces rest properties, which are the same but for objects.
-
-* Rest properties:
+* ES2018 introduces **rest properties**, which are the same but for **object destructuring**.
 
 
 ```
 const { first, second, ...others } = {
-first: 1,
-second: 2,
-third: 3,
-fourth: 4,
-fifth: 5
+  first: 1,
+  second: 2,
+  third: 3,
+  fourth: 4,
+  fifth: 5
 } 
 first // 1
 second // 2
 others // { third: 3, fourth: 4, fifth: 5 }
 ```
 
-* Spread properties allow to create a new object by combining the properties of the object
-  passed after the spread operator:
+* ES2018 has **spread properties** allow to create a new object by combining the properties of the object
+  passed after the spread operator.
 
 
 ```
@@ -101,7 +90,7 @@ const items = { first, second, ...others }
 items //{ first: 1, second: 2, third: 3, fourth: 4, fifth: 5 }
 ```
 
-* There is also a special array-like object named arguments that contains all arguments by their index. When rest parameters did not exist in the language, and using arguments was the only way to get all arguments of the function.
+* There is also a special array-like object named `arguments` that contains all arguments by their index. When rest parameters did not exist in the language, and using arguments was the only way to get all arguments of the function.
 
 
 ```
